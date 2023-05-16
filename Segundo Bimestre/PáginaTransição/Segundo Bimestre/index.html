@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookwelf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Righteous&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="icon.png">   
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo"> > BOOKWELF < </h1>
+    </header>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <li><a href='a'>Inicio</a></li>
+            <ul class='sub-menus'>
+            </ul>
+          </li>
+          <li><a class='dropdown-arrow' href='a'>Lidos</a>
+            <ul class='sub-menus'>
+              <li><a href='#'>Lidos de 2020</a></li>
+              <li><a href='#'>Lidos de 2021</a></li>
+              <li><a href='#'>Lidos de 2022</a></li>
+              <li><a href='#'>Lidos de 2023</a></li>
+            </ul>
+          </li>
+          <li><a href='a'>Wishlist</a></li>
+          <li><a class='dropdown-arrow' href='a'>Resenhas</a>
+            <ul class='sub-menus'>
+              <li><a href='#'>Publicadas</a></li>
+              <li><a href='#'>Rascunhos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+            <div class="flex">
+                <div class="inline">
+                    <div id="passar_mouse">passar mouse <div id="mostrar">mostrar este texto </div></div>
+                </div>
+            </div>
+  
+        <div class="inline2">
+            <div class="flex">
+                <table class="customTable">
+                <caption><strong>Livros Mais Lidos de 2022</strong></caption>
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>Autor</th>
+                        <th>Editora</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>É assim que acaba</td>
+                        <td>Colleen Hoover</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Nas pegadas da alemoa</td>
+                        <td>Ilko Minev</td>
+                        <td>Row 2, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Amor & gelato</td>
+                        <td>Jenna Evans Welch</td>
+                        <td>Row 3, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>É assim que começa</td>
+                        <td>Colleen Hoover</td>
+                        <td>Row 4, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Torto arado</td>
+                        <td>Itamar Vieira Junior</td>
+                        <td>Row 5, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Os sete maridos de Evelyn Hugo</td>
+                        <td>Taylor Jenkins Reid</td>
+                        <td>Row 6, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>A hipótese do amor</td>
+                        <td>Ali Hazelwood</td>
+                        <td>Row 7, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>A garota do lago</td>
+                        <td>Charlie Donlea</td>
+                        <td>Row 8, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Todas as suas (im)perfeições</td>
+                        <td>Colleen Hoover</td>
+                        <td>Row 9, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>A biblioteca da meia-noite</td>
+                        <td>Matt Haig</td>
+                        <td>Row 10, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Tudo é rio</td>
+                        <td>Carla Madeira</td>
+                        <td>Row 11, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Demon Slayer: Kimetsu No Yaiba - 1</td>
+                        <td>Koyoharu Gotouge</td>
+                        <td>Row 12, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>Mil beijos de garoto</td>
+                        <td>Tillie Cole</td>
+                        <td>Row 13, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>One Piece 3 em 1 Vol. 1</td>
+                        <td>Eiichiro Oda</td>
+                        <td>Row 14, Cell 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+        <div class="inline2">
+            <div class="flex">
+                <form>
+                    <fieldset style="color: #C7E994;">
+                        <legend>Questionário</legend>
+                        <fieldset style="color: #FA55AD">
+                            <legend>Dados Pessoais</legend>
+                                <label for="Dados Pessoais">Nome:</label>
+                                    <input
+                                    type="text"
+                                    id="Dados Pessoais"
+                                    />
+                                <br> <br>
+                                <label for="Dados Pessoais">Email:</label>
+                                    <input
+                                    type="email"
+                                    id="Dados Pessoais"
+                                    />
+                                <br> <br>
+                                <label for="Dados Pessoais">Data de Nascimento:</label>
+                                <input
+                                    type="date"
+                                    id="Dados Pessoais"
+                                />
+                        </fieldset>
+                
+                        <fieldset style="color: #C7E994;">
+                            <legend>Pesquisa</legend>
+                            <label for="Pesquisa">Qual seu gênero literário favorito?</label>
+                                    <input
+                                    type="text"
+                                    id="Pesquisa"
+                                    />
+                                <br> <br>
+                            <label for="Pesquisa">Qual sua média de leitura mensal?</label>
+                                <select id="Pesquisa" name="Leitura">
+                                    <option value="Opção">Selecionar</option>
+                                    <option value="0,5 e 1 livro">Entre meio e 1 Livro</option>
+                                    <option value="2 e 5 livros">Entre 2 e 5 Livros</option>
+                                    <option value="6 e 9 livros">Entre 6 e 9 Livros</option>
+                                    <option value="10 ou mais">10 ou mais Livros</option>
+                                </select>
+                        <br> <br>
+                        <label for="Pesquisa">Qual a probabilidade de você ler um clássico?</label>
+                
+                        <input
+                            type="radio"
+                            id="Alta"
+                            name="Pesquisa"
+                            value="Alta"
+                        />
+                        <label for="Alta">Alta</label>
+                        <input
+                            type="radio"
+                            id="Baixa"
+                            name="Pesquisa"
+                            value="Baixa"
+                        />
+                        <label for="Baixa">Baixa</label>
+                        </fieldset>
+                
+                        <fieldset style="color: #FA55AD;">
+                            <legend>Comentários</legend>
+                                <textarea placeholder="Envie um Comentário!" id="Comentários" name="Comentários" rows="4" cols="60"></textarea> <br>
+                                <button type="submit" class="button">Submeter</button> <button type="reset" class="button">Resetar</button>
+                        </fieldset>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
