@@ -1,0 +1,51 @@
+.body{
+    margin: 0;
+    background: rgb(173,0,73);
+    background: linear-gradient(180deg, rgba(173,0,73,1) 0%, rgba(255,0,106,1) 100%);
+    }
+    
+    .main{
+        display: flex;
+        position:relative;
+        top: 1vh;
+        left: 1vw;
+        height: 98vh;
+        width: 98vw;
+        background-color: #ffa6cb;
+        border-radius: 50px;
+        font-family: 'Pangolin', cursive;
+    }
+
+    .esquerda{
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .esquerda > h1 {
+        color: #c30052;
+    }
+
+    .direita {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 10px;
+        border-radius: 12px;
+        background-color: #c30052;
+        width: 60%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
