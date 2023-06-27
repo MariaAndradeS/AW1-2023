@@ -48,4 +48,114 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        box-shadow: 4px 4px 4px #6b002c;
+    }
+
+    form > h1 {
+        background: linear-gradient(100deg, rgba(255,106,168,1) 0%, rgba(249,158,196,1) 45%, rgba(255,238,245,1) 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    form > label {
+        background: linear-gradient(100deg, rgba(255,106,168,1) 0%, rgba(249,158,196,1) 45%, rgba(255,238,245,1) 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-weight: 900;
+        font-size: 20px;
+    
+    }
+    
+    form > input {
+        background: rgb(255,106,168);
+        background: linear-gradient(100deg, rgba(255,106,168,1) 0%, rgba(249,158,196,1) 45%, rgba(255,238,245,1) 100%);
+        border-radius: 10px;
+        border: none;
+        padding: 5% 5%;
+        
+        
+    }
+    form > input::placeholder {
+        color: #aa0047;
+    }
+    
+    form > button {
+        background: rgb(255,106,168);
+        background: linear-gradient(100deg, rgba(255,106,168,1) 0%, rgba(249,158,196,1) 45%, rgba(255,238,245,1) 100%);
+        color: #aa0047;
+        font-size: 20px;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        padding: 7% 32%;
+    }
+    
+    form > button:hover{
+        transform: scale(120%);
+        transition: all 0.2s ease;
+    }
+    
+    .card:hover{
+        -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+        transform: scale(1.4);
+        transition: all 0.2s ease;
+        
+    }
+    
+    .girar:hover{
+        animation: Girar 4s linear infinite;
+    }
+    
+    
+    @-webkit-keyframes Fundo {
+        0%{background-position:0% 91%}
+        50%{background-position:100% 10%}
+        100%{background-position:0% 91%}
+    }
+    @-moz-keyframes Fundo {
+        0%{background-position:0% 91%}
+        50%{background-position:100% 10%}
+        100%{background-position:0% 91%}
+    }
+    @keyframes Fundo {
+        0%{background-position:0% 91%}
+        50%{background-position:100% 10%}
+        100%{background-position:0% 91%}
+    }
+    
+    @keyframes Girar {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        main{
+            flex-direction: column;
+        }
+    
+        .right{
+            margin-top: -10%;
+            margin-bottom: 20%;
+        }
+    
+        .left > h1 {
+            display: none;
+        }
+    
+        .left > img {
+            transform: scale(50%);
+        }
+    
+        body > div{   
+            background-size: 50%;
+        }
     }
