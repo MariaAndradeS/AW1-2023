@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz de JavaScript</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h4 {
+            color: #ffcbcb;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option {
+            margin: 5px 0;
+        }
+
+        .submit-button {
+            background-color: #ffcbcb;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tag {
+            display: none;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .correct {
+            background-color: #a8d1d1;
+            color: #ffffff;
+        }
+
+        .incorrect {
+            background-color: #fd8a8a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de JavaScript</h1>
+        <h4>this is a jojo's reference?</h4>
+
+        <div class="question">
+                <p>Pergunta 1: Qual o nome completo do protagonista do primeiro arco de Jojo's Bizarre Adventure?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q1" value="Joseph Joestar" id="q1-1"> Joseph Joestar</label>
+                    <label class="option"><input type="radio" name="q1" value="Jotaro Kujo" id="q1-2"> Jotaro Kujo</label>
+                    <label class="option"><input type="radio" name="q1" value="Jonathan Joestar" id="q1-3"> Jonathan Joestar</label>
+                    <label class="option"><input type="radio" name="q1" value="Josuke Higashikata" id="q1-4"> Josuke Higashikata</label>
+
+                </div>
+                <button class="submit-button" id="submit1" type="submit">Enviar</button>
+                <span class="tag correct" id = "correct1">Correto!</span>
+                <span class="tag incorrect" id = "incorrect1">Incorreto.</span>
+        </div>
+
+        <div class="question" id="p2">
+            <p> Pergunta 2: Qual é o stand de Jotaro Kujo em Stardust Crusaders?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2"> Star Platinum</label>
+                <label class="option"><input type="radio" name="q2"> Crazy Diamond</label>
+                <label class="option"><input type="radio" name="q2"> Gold Experience</label>
+                <label class="option"><input type="radio" name="q2"> Silver Chariot</label>
+            </div>
+            <button class="submit-button" id="submit2" type="submit">Enviar</button>
+            <span class="tag correct" id = "correct2">Correto!</span>
+            <span class="tag incorrect" id = "incorrect2">Incorreto.</span>
+        </div>
+    
+        <div class="question">
+            <p> Pergunta 3: Em Diamond is Unbrakable, qual é o apelido de Josuke Higashikata?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3"> Echoes</label>
+                <label class="option"><input type="radio" name="q3"> Golden Wind</label>
+                <label class="option"><input type="radio" name="q3"> Stone Free</label>
+                <label class="option"><input type="radio" name="q3"> Crazy Diamond</label>
+            </div>
+            <button class="submit-button" id="submit3" type="submit">Enviar</button>
+            <span class="tag correct" id = "correct3" >Correto!</span>
+            <span class="tag incorrect" id = "incorrect3">Incorreto.</span>
+        </div>
+    
+          <div class="question">
+            <p>  Pergunta 4: Qual o principal objetivo de Dio Brando?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4"> Encontrar a flecha Stand</label>
+                <label class="option"><input type="radio" name="q4"> Dominar o mundo com Stand</label>
+                <label class="option"><input type="radio" name="q4"> VIngar sua família</label>
+                <label class="option"><input type="radio" name="q4"> Tornar-se um caçador de Stand</label>
+            </div>
+            <button class="submit-button" id="submit4" type="submit">Enviar</button>
+            <span class="tag correct" id = "correct4" >Correto!</span>
+            <span class="tag incorrect" id = "incorrect4">Incorreto.</span>
+        </div>
+    
+        <div class="question">
+            <p>  Pergunta 5: Quem é o autor de Jojo's Bizarre Adventure?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5"> Masashi Kishimoto</label>
+                <label class="option"><input type="radio" name="q5"> Hirohiko Araki</label>
+                <label class="option"><input type="radio" name="q5"> Eiichiro Oda</label>
+                <label class="option"><input type="radio" name="q5"> Tite Kubo</label>
+            </div>
+            <button class="submit-button" id="submit5" type="submit">Enviar</button>
+            <span class="tag correct" id = "correct5" >Correto!</span>
+            <span class="tag incorrect" id = "incorrect5">Incorreto.</span>
+        </div>
+
+
+    <script>
+
+        var questions = document.getElementsByClassName("question")
+        questions[0].style.display="block"
+
+        var question2 = document.querySelector("#p2")
+        question2.style.display = "none"
+
+        var options1 = document.getElementsByName("q1")
+        var submit1 = document.getElementById("submit1") 
+        var correct1 = document.getElementById("correct1") 
+        var incorrect1 = document.getElementById("incorrect1") 
+        submit1.onclick = function (e) {
+            if (options1[2].checked){
+                correct1.style.display = "block"
+                incorrect1.style.display = "none"
+                submit1.disabled = true
+                questions[1].style.display="block"
+                question2.style.display = "block"
+            }
+            else{
+                incorrect1.style.display = "block"
+            }
+        }
+
+        var question3 = document.querySelector("#p3")
+        question3.style.display = "none"
+
+        var options2= document.getElementsByName("q2")
+        var submit2= document.getElementById("submit2") 
+        var correct2= document.getElementById("correct2") 
+        var incorrect2= document.getElementById("incorrect2") 
+        submit2.onclick = function (e) {
+            if (options2[0].checked){
+                correct2.style.display = "block"
+                incorrect2.style.display = "none"
+                submit2.disabled = true
+                questions[1].style.display="block"
+                question3.style.display = "block"
+            }
+            else{
+                incorrect2.style.display = "block"
+            }
+        }
+
+        var options3= document.getElementsByName("q3")
+        var submit3= document.getElementById("submit3") 
+        var correct3= document.getElementById("correct3") 
+        var incorrect3= document.getElementById("incorrect3") 
+        submit3.onclick = function (e) {
+            if (options3[3].checked){
+                correct3.style.display = "block"
+                incorrect3.style.display = "none"
+                submit3.disabled = true
+                questions[3].style.display="block"
+                
+            }
+            else{
+                incorrect3.style.display = "block"
+            }
+        }
+
+        var options4= document.getElementsByName("q4")
+        var submit4= document.getElementById("submit4") 
+        var correct4= document.getElementById("correct4") 
+        var incorrect4= document.getElementById("incorrect4") 
+        submit4.onclick = function (e) {
+            if (options4[1].checked){
+                correct4.style.display = "block"
+                incorrect4.style.display = "none"
+                submit4.disabled = true
+                questions[4].style.display="block"
+                
+            }
+            else{
+                incorrect4.style.display = "block"
+            }
+        }
+
+        var options5= document.getElementsByName("q5")
+        var submit5= document.getElementById("submit5") 
+        var correct5= document.getElementById("correct5") 
+        var incorrect5= document.getElementById("incorrect5") 
+        submit5.onclick = function (e) {
+            if (options5[3].checked){
+                correct5.style.display = "block"
+                incorrect5.style.display = "none"
+                submit5.disabled = true                
+            }
+            else{
+                incorrect5.style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>

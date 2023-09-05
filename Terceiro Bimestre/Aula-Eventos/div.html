@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando cor da Div</title>
+    <style>
+        div {
+            border: solid 2px palevioletred;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        var divs = document.querySelectorAll("div")
+
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        function bgChange(event) {
+            var str = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")"}
+            event.target.style.backgroundCOlor = str
+
+        divs.forEach(div => div.addEventListener("click", bgChange) )
+    </script>
+</body>
+</html>

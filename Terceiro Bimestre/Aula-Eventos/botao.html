@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar a Cor</title>
+</head>
+<body>
+    <button>Mude a Cor!</button>
+    <button>Mude a Cor! (De novo)</button>
+
+    <script>
+        var btns = document.querySelectorAll("button");
+
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        function bgChange() {
+            var rndCol = 
+                "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+            document.body.style.backgroundColor = rndCol;
+        };
+
+        btns.forEach(btn => btn.onclick = bgChange)
+    </script>
+</body>
+</html>
